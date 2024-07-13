@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.container{
+    position: absolute;
+width: 1000px;
+height: 600px;
+transform: translate(-50%, -50%);
+top: 50%;
+left: 50%;
+box-shadow: 0 3px 15px #dbdbdb;
+}
+.container .slide .item{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate((0,-50%));
+    border-radius: 20px;
+    box-shadow: 0 30pox 50px #505050;
+    background-position: 50% 50%;
+    background-size:cover;
+    display: inline-block;
+    transition: 0.5s;
+
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0,0);
+    border-radius:0;
+    width: 100%;
+    height: 100%;
+}
+.slide .item:nth-child(3){
+    left: 50%;
+
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 220px);
+    
+}.slide .item:nth-child(5){
+left: calc(50% + 440px);
+    
+}
+.slide .item:nth-child(n  +6){
+    left:calc(50% + 660px);
+    opacity: o;
+}
+.item .content{
+    position: absolute;
+    left: 100px;
+    left: 50%;
+    width: 100%;
+    text-align: left;
+    color: #eee;
+    transform: translate(0,-50%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: none;
+}
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+.name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    
+    /* border: 2px solid red; */
+    color: red;
+}
+.name{
+    color: white;
+    position: absolute;
+    margin-left: -48%;
+    font-size: 50px;
+    z-index: 200;
+    margin-top: 12%;
+}
+.content .des{
+    width: 30%;
+    margin-top: 25%;
+    /* left: -82%; */
+    position: absolute;
+   /* margin-top: -20%; */
+   margin-bottom: 10px;
+   /* border: 2px solid red; */
+   left: -48%;
+   top: 400%;
+   animation: animate 1s ease-in-out 0.3s 1 forwards;
+   color: black;
+   font-size: 20px;
+   font-weight: 900;
+}
+.content button{
+    position: absolute;
+    margin-top: 20%;
+    margin-left: -44%;
+    font-size: 20px;
+    padding: 5px 10px;
+    /* margin-left: -20%; */
+    /* margin-top: 15%; */
+   animation: animate 1s ease-in-out 0.3s 1 forwards;
+
+}
+@keyframes   animate {
+from{
+    opacity: 0;
+    transform: translate(0,100px);
+    filter: blur(33px);
+}
+to{
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+}
+}
+.button{
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 20px;
+    font-size: 40px;
+    padding: 20px 30px;
+}
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 1px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+.button button:hover{
+    background-color: grey;
+    color: #fff;
+
+}
